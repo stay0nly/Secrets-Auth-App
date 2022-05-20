@@ -30,7 +30,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://admin-dims:Test123@cluster0.dry8r.mongodb.net/userDB", {
+mongoose.connect(process.env.MONGODB_LINK, {
   useNewUrlParser: true
 });
 
